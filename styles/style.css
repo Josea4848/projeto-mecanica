@@ -4,10 +4,16 @@ body {
   display: flex;
 }
 
+p {
+  line-height: 0px;
+}
+
 .container {
   width: 1024px;
-  display: inline-flex;
-  margin: 20px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #box {
@@ -18,8 +24,6 @@ body {
   border-radius: 7px;
 }
 
-#question {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+
+
+

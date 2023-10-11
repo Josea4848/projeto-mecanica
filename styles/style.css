@@ -1,12 +1,25 @@
 body {
-  background-color: #003049;
+  background-color: #000814;
   height: 110vh;
+  display: flex;
+}
+
+.container {
+  width: 1024px;
+  display: inline-flex;
+  margin: 20px;
 }
 
 #box {
+  padding: 20px;
   background-color: white;
-  width: 250px;
+  width: 300px;
   height: 400px;
   border-radius: 7px;
 }
 
+#question {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

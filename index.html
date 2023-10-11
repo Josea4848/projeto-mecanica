@@ -13,12 +13,23 @@
     <div class="container">
       <div id="box">
         <form action="">
+          <!-- Carga -->
           <p>Massa da carga (em kg):</p>
-          <input type="range" class="form-range" min="0" max="5000" width="200px" step="0.1" value="5" id="massa-carga"> 
-        </form>
+            <div class="slider">
+              <input type="range" class="form-range" min="0" max="5000" width="200px" step="0.1" value="5" id="massa-carga"> 
+              <p id="carga-massa"></p>
+            </div>
+          <!-- Carga END -->
+          
+          <!-- contra peso-->
+          <p>Massa do contra-peso (em kg):</p>
+          <div class="slider">
+            <input type="range" class="form-range" min="0" max="10000" width="200px" step="0.1" value="0" id="massa-cpeso"> 
+            <p id="contra-peso"></p>      
+          </div>
+          <!-- contra peso END -->
 
-        <p id="carga-massa"></p>
-        <p id="contra-peso"></p>
+        </form>
       </div>
 
     </div> 

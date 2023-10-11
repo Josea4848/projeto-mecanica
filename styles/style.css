@@ -16,6 +16,20 @@ p {
   justify-content: space-between;
 }
 
+.slider {
+  display: flex;
+}
+
+.form-range {
+  opacity: 0.7;
+  transition: 0.5s;
+  margin-right: 10px;
+}
+
+.form-range:hover {
+  opacity: 1;
+}
+
 #box {
   padding: 20px;
   background-color: white;

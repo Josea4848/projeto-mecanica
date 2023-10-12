@@ -30,6 +30,14 @@ p {
   opacity: 1;
 }
 
+#image {
+  background-image: url(../assets/questao.png);
+  background-size: contain;
+  border-radius: 7px;
+  width: 300px;
+  height: 300px;
+}
+
 #box {
   padding: 20px;
   background-color: white;

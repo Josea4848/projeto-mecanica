@@ -37,7 +37,7 @@ d1Input.addEventListener("input", () => {
   if(cargaPeso < 0) {
     cargaPeso = 0;
   }
-  cargaOut.textContent = cargaPeso.toFixed(2) + " kg";
+  cargaOut.textContent = cargaPeso.toFixed(2) + " kg"; 
   cargaIn.value = cargaPeso;
-  contraPesoBox.style.left = (40 + (Number(d1Input.value))/(15)*(-17)) + "%";
+  contraPesoBox.style.left = (40 + (Number(d1Input.value))/(10)*(-17)) + "%";
 })

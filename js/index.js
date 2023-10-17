@@ -8,6 +8,7 @@ let cargaOut = document.getElementById("carga-massa");
 let cargaIn = document.getElementById("massa-carga");
 let d1Input = document.getElementById("distancia-cpeso");
 let d1Out = document.getElementById("distancia-cpeso-out");
+let contraPesoBox = document.getElementById("contrapeso");
 
 cargaOut.textContent = cargaIn.value + " kg";
 d1Out.textContent = calculaDistanciaCpeso(cargaOut.value).toFixed(2) + " m";
@@ -38,4 +39,5 @@ d1Input.addEventListener("input", () => {
   }
   cargaOut.textContent = cargaPeso.toFixed(2) + " kg";
   cargaIn.value = cargaPeso;
+  contraPesoBox.style.left = (40 + (Number(d1Input.value))/(15)*(-17)) + "%";
 })

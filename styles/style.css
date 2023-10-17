@@ -14,6 +14,7 @@ p {
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .slider {
@@ -46,6 +47,54 @@ p {
   border-radius: 7px;
 }
 
+#question {
+  background-color: red;
+  width: 500px;
+  height: 300px;
+}
+
+.row {
+  width: 100%;
+  background-color: blue;
+}
+
+.row1 {
+  height: 35%;
+  background-color: green;
+}
+
+.row2 {
+  height: 65%;
+  background-color: blueviolet;
+  display: flex;
+
+}
+
+#braco {
+  width: 50%;
+  height: 20%;
+  background-color: white;
+  position: relative;
+  top: calc(100% - 20%);
+  left: calc(50% - 25%);
+  transition: 1.5s;
+  transform-origin: 35%;
+}
 
 
+#base {
+  width: 4.5%;
+  position: relative;
+  left: calc(50% - 10%);
+  background-color: white;
+  height: 100%;
+}
 
+#contrapeso {
+  width: 4%;
+  height: 7%;
+  background-color: rgb(255, 0, 55);
+  z-index: 2;
+  position: relative;
+  left: 40%;
+}

@@ -46,9 +46,16 @@ cargaIn.addEventListener("input", () => {
     d1Input.value = cPesoDistancia;
     contraPesoBox.style.left = calculaPosicao(d1Input.value) + "%";
   }
+  if(cPesoDistancia > 10.02) {
+    d1Out.style.color = "red";
+  }
+  else {
+    d1Out.style.color = "black";
+  }
 })
 
 d1Input.addEventListener("input", () => {
+  d1Out.style.color = "black";
   let cargaPeso = calculaCarga(d1Input.value);
   d1Out.textContent = d1Input.value + " m";
   opacityOutput(1);

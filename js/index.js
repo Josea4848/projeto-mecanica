@@ -20,22 +20,27 @@ d1Input.value = calculaDistanciaCpeso(cargaOut.value);
 massaBCOut.textContent = massaBCIn.value + " kg";
 massaBDOut.textContent = massaBDIn.value + " kg";
 
+function opacityOutput(value) {
+  cargaOut.style.opacity = String(value);
+  d1Out.style.opacity = String(value);
+}
 
 function calculaPosicao(distancia) {
   return (40 + (Number(d1Input.value))/(10)*(-22.5));
 }
 
 function calculaDistanciaCpeso(carga) {
-  return (1500*d3 + parseFloat(cargaIn.value)*d4 - 500*d2)/mCpeso;
+  return (parseFloat(massaBDIn.value)*d3 + parseFloat(cargaIn.value)*d4 - parseFloat(massaBCIn.value)*d2)/mCpeso;
 }
 
 function calculaCarga(d1) {
-  return (mCpeso*d1 - 1500*d3 + 500*d2)/d4;
+  return (mCpeso*d1 - parseFloat(massaBDIn.value)*d3 + parseFloat(massaBCIn.value)*d2)/d4;
 }
 
 cargaIn.addEventListener("input", () => {
   let cPesoDistancia = calculaDistanciaCpeso(cargaIn.value);
   cargaOut.textContent = cargaIn.value + " kg";    
+  opacityOutput(1);
   if(cPesoDistancia >= 0) {
     d1Out.textContent = cPesoDistancia.toFixed(2) + " m";
     d1Input.value = cPesoDistancia;
@@ -46,6 +51,8 @@ cargaIn.addEventListener("input", () => {
 d1Input.addEventListener("input", () => {
   let cargaPeso = calculaCarga(d1Input.value);
   d1Out.textContent = d1Input.value + " m";
+  opacityOutput(1);
+
   if(cargaPeso < 0) {
     cargaPeso = 0;
   }
@@ -57,9 +64,11 @@ d1Input.addEventListener("input", () => {
 
 massaBCIn.addEventListener("input", () => {
   massaBCOut.textContent = massaBCIn.value + " kg";
+  opacityOutput(0.2)
 })
 
 massaBDIn.addEventListener("input", () => {
   massaBDOut.textContent = massaBDIn.value + " kg";
+  opacityOutput(0.2);
 })
 

@@ -6,6 +6,9 @@
   <title>Mecânica para Eng. da Computação</title>
   <link rel="stylesheet" href="styles/style.css">
   <script src="js/index.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
   <header></header>
@@ -22,23 +25,46 @@
           <!-- Carga END -->
           
           <!-- distancia contra peso-->
-          <p>Distância do contra-peso ao ponto B:</p>
+          <p>Distância do contra-peso(c) ao ponto B:</p>
           <div class="slider">
             <input type="range" class="form-range" min="2.4" max="10" width="200px" step="0.1" value="0" id="distancia-cpeso"> 
             <p id="distancia-cpeso-out"></p>      
           </div>
           <!-- distancia contra peso END -->
+
+          <!-- massa bc-->
+          <p>Centro de massa BC:</p>
+          <div class="slider">
+            <input type="range" class="form-range" min="0" max="1000" width="200px" step="0.1" value="500" id="massa-bc-in"> 
+            <p id="massa-bc-out"></p>      
+          </div>
+          <!-- massa bc END -->
+
+          <!-- massa bd-->
+          <p>Centro de massa BD:</p>
+          <div class="slider">
+            <input type="range" class="form-range" min="0" max="2000" width="200px" step="0.1" value="1500" id="massa-bd-in"> 
+            <p id="massa-bd-out"></p>      
+          </div>
+          <!-- massa bd END -->
         </form>
       </div>
 
       <div id="question">
         <div class="row row1">
+          <div id="pontoB"><p>B</p></div>
+          <div id="pontoC"><p>C</p></div> 
           <div id="braco"></div>
+          <div id="pontoD"><p>D</p></div> 
         </div>
         <div class="row row2">
-          <div id="contrapeso"></div>
-          
+          <div id="pontoA"><p>A</p></div>
+          <div id="contrapeso"><p>C</p></div>
           <div id="base"></div>
+          <div id="guincho">
+            <div id="linha"></div>
+            <div id="box-carga"></div>
+          </div>
         </div>
       </div>
 

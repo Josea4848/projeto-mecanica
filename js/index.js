@@ -26,7 +26,7 @@ function opacityOutput(value) {
 }
 
 function calculaPosicao(distancia) {
-  return (40 + (Number(d1Input.value))/(10)*(-22.5));
+  return (40 + (Number(d1Input.value))/(15)*(-22.5));
 }
 
 function calculaDistanciaCpeso(carga) {
@@ -46,12 +46,6 @@ cargaIn.addEventListener("input", () => {
     d1Input.value = cPesoDistancia;
     contraPesoBox.style.left = calculaPosicao(d1Input.value) + "%";
   }
-  if(cPesoDistancia > 10.02) {
-    d1Out.style.color = "red";
-  }
-  else {
-    d1Out.style.color = "black";
-  }
 })
 
 d1Input.addEventListener("input", () => {
@@ -59,9 +53,10 @@ d1Input.addEventListener("input", () => {
   let cargaPeso = calculaCarga(d1Input.value);
   d1Out.textContent = d1Input.value + " m";
   opacityOutput(1);
-
+  cargaOut.style.color = "black";
   if(cargaPeso < 0) {
     cargaPeso = 0;
+    cargaOut.style.color = "red";
   }
   cargaOut.textContent = cargaPeso.toFixed(2) + " kg"; 
   cargaIn.value = cargaPeso;

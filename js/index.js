@@ -41,10 +41,13 @@ cargaIn.addEventListener("input", () => {
   let cPesoDistancia = calculaDistanciaCpeso(cargaIn.value);
   cargaOut.textContent = cargaIn.value + " kg";    
   opacityOutput(1);
+  d1Out.textContent = cPesoDistancia.toFixed(2) + " m";
+  d1Input.value = cPesoDistancia;
   if(cPesoDistancia >= 0) {
-    d1Out.textContent = cPesoDistancia.toFixed(2) + " m";
-    d1Input.value = cPesoDistancia;
+    d1Out.style.color = "black";
     contraPesoBox.style.left = calculaPosicao(d1Input.value) + "%";
+  } else {
+      d1Out.style.color = "red";
   }
 })
 
@@ -55,7 +58,6 @@ d1Input.addEventListener("input", () => {
   opacityOutput(1);
   cargaOut.style.color = "black";
   if(cargaPeso < 0) {
-    cargaPeso = 0;
     cargaOut.style.color = "red";
   }
   cargaOut.textContent = cargaPeso.toFixed(2) + " kg"; 

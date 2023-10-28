@@ -45,7 +45,8 @@ p {
   padding: 20px;
   background-color: white;
   width: 35%;
-  height: 400px;
+  overflow: scroll;
+  height: 500px;
   border-radius: 7px;
 }
 
@@ -184,5 +185,6 @@ p {
   height: 50px;
   width: 50px;
   position: relative;
-  left: 55%;
+  left: 40%;
+  text-align: center;
 }

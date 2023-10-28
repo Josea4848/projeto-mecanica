@@ -59,7 +59,7 @@ distanciaCarga.addEventListener("input", () => {
   opacityOutput(1);
   d1Input.value = calculaDistanciaCpeso();
   d1Out.textContent = calculaDistanciaCpeso().toFixed(2) + "m";
-  contraPesoBox.style.left = calculaPosicao(d1Input.value, 52, 29, 1, 15) + "%";
+  contraPesoBox.style.left = calculaPosicao(d1Input.value, 52, 29, 1, 25) + "%";
   if(calculaDistanciaCpeso() < 0) 
     d1Out.style.color = "red";
   else 
@@ -71,7 +71,7 @@ d1Input.addEventListener("input", () => {
   d1Out.style.color = "black";
   d1Out.textContent = d1Input.value + " m";
   opacityOutput(1);
-  contraPesoBox.style.left = calculaPosicao(d1Input.value, 52, 29, 1, 15) + "%";
+  contraPesoBox.style.left = calculaPosicao(d1Input.value, 52, 29, 1, 25) + "%";
   distanciaCarga.value = calculaDistanciaCarga();
   distanciaCargaOut.textContent = calculaDistanciaCarga().toFixed(2) + "m";
   cargaBox.style.left = calculaPosicao(distanciaCarga.value,40,70,1,25) + "%";

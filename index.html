@@ -15,7 +15,10 @@
   <main class="bg-dark">
     <div class="container">
       <div id="box">
-        <form action="">                    
+        <div id="btn-box"><button id="mode-btn">Equilíbrio</button></div>
+
+        <form action="">                              
+          
           <!-- Carga -->
           <p>Massa da carga:</p>
             <div class="slider">
@@ -27,7 +30,7 @@
           <!-- distancia carga-->
           <p>Distância da carga ao ponto B:</p>
           <div class="slider">
-            <input type="range" class="form-range" min="1" max="25" width="200px" step="0.01" value="0" id="distancia-carga"> 
+            <input type="range" class="form-range" min="1" max="25" width="200px" step="0.1" value="0" id="distancia-carga"> 
             <p id="distancia-carga-out"></p>      
           </div>
           <!-- distancia carga -->
@@ -35,7 +38,7 @@
           <!-- distancia contra peso-->
           <p>Distância do contra-peso(c) ao ponto B:</p>
           <div class="slider">
-            <input type="range" class="form-range" min="1" max="25" width="200px" step="0.01" value="1" id="distancia-cpeso"> 
+            <input type="range" class="form-range" min="1" max="25" width="200px" step="0.1" value="1" id="distancia-cpeso"> 
             <p id="distancia-cpeso-out"></p>      
           </div>
           <!-- distancia contra peso END -->
@@ -43,7 +46,7 @@
           <!-- massa bc-->
           <p>Centro de massa BC:</p>
           <div class="slider">
-            <input type="range" class="form-range" min="100" max="1000" width="200px" step="0.1" value="500" id="massa-bc-in"> 
+            <input type="range" class="form-range" min="0" max="1000" width="200px" step="0.1" value="500" id="massa-bc-in"> 
             <p id="massa-bc-out"></p>      
           </div>
           <!-- massa bc END -->
@@ -51,7 +54,7 @@
           <!-- massa bd-->
           <p>Centro de massa BD:</p>
           <div class="slider">
-            <input type="range" class="form-range" min="100" max="2000" width="200px" step="0.1" value="1500" id="massa-bd-in"> 
+            <input type="range" class="form-range" min="0" max="2000" width="200px" step="0.1" value="1500" id="massa-bd-in"> 
             <p id="massa-bd-out"></p>      
           </div>
           <!-- massa bd END -->
@@ -59,7 +62,7 @@
           <!-- massa contrapeso-->
           <p>Massa Contra-peso(c):</p>
           <div class="slider">
-            <input type="range" class="form-range" min="100" max="5000" width="200px" step="0.1" value="4966.67" id="contrapeso-in"> 
+            <input type="range" class="form-range" min="100" max="6000" width="200px" step="0.1" value="4966.67" id="contrapeso-in"> 
             <p id="massa-contrapeso"></p>      
           </div>
           <!-- massa contrapeso -->
@@ -97,6 +100,9 @@
           <div id="guincho">
             <p>Carga</p>
           </div>
+        </div>
+        <div id="torque">
+          <p id="torque-output">Torque resultante: 0 N.m</p>
         </div>
       </div>
 

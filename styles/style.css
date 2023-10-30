@@ -55,7 +55,7 @@ p {
   border-radius: 10px;
   padding: 20px;
   width: 50%;
-  height: 400px;
+  height: 450px;
 }
 
 .row {
@@ -64,14 +64,14 @@ p {
 }
 
 .row1 {
-  height: 35%;
+  height: 30%;
   /* background-color: green; */
   display: flex;
   position: relative;
 }
 
 .row2 {
-  height: 65%;
+  height: 60%;
   /* background-color: blueviolet; */
   display: flex;
 
@@ -181,10 +181,42 @@ p {
 
 #guincho {
   z-index: 4;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   height: 50px;
   width: 50px;
   position: relative;
   left: 40%;
   text-align: center;
+}
+
+#btn-box {
+  background-color: white;
+  position: sticky;
+  top: -2px;
+  z-index: 1; 
+  height: 50px;
+}
+
+button {
+  height: 100%;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  background-color: #07ff93;
+  border: none;
+  font-size: 20px;
+  border-radius: 7px;
+  transition: 0.5s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #026b3d;
+}
+
+#torque {
+  margin-top: 2.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }

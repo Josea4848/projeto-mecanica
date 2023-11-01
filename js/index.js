@@ -59,7 +59,7 @@ function opacityOutput(value) {
 
 //Calcula posição dos blocos
 function calculaPosicao(distancia, minPer, maxPer, minValue, maxValue, ) {
-  return (40 + (Number(distancia - minValue))/(maxValue - minValue)*(maxPer - minPer));
+  return (minPer + (Number(distancia - minValue))/(maxValue - minValue)*(maxPer - minPer));
 }
 
 //Calcula a distância do contra-peso
@@ -76,13 +76,12 @@ function calculaDistanciaCarga() {
 distanciaCarga.addEventListener("input", () => {  
   distanciaCargaOut.textContent = distanciaCarga.value + "m"
   distanciaCargaOut.style.color = "black";
-  contraPesoBox.style.left = calculaPosicao(d1Input.value, 52, 29, 1, 25) + "%";
+  cargaBox.style.left = calculaPosicao(distanciaCarga.value,40,70,1,25) + "%";
   if(!freeMode()) {
-    cargaBox.style.left = calculaPosicao(distanciaCarga.value,40,70,1,25) + "%";
     opacityOutput(1);
     d1Input.value = calculaDistanciaCpeso();
     d1Out.textContent = calculaDistanciaCpeso() + "m";
-    
+    contraPesoBox.style.left = calculaPosicao(d1Input.value, 40.5, 17, 1, 25) + "%";  
     if(calculaDistanciaCpeso() < 0 || calculaDistanciaCpeso() > 25) 
       d1Out.style.color = "red";
     else 
@@ -93,12 +92,12 @@ distanciaCarga.addEventListener("input", () => {
 d1Input.addEventListener("input", () => {
   d1Out.style.color = "black";
   d1Out.textContent = d1Input.value + " m";
-  cargaBox.style.left = calculaPosicao(distanciaCarga.value,40,70,1,25) + "%";
+  contraPesoBox.style.left = calculaPosicao(d1Input.value, 40.5, 17, 1, 25) + "%";
   if(!freeMode()) {
     opacityOutput(1);
-    contraPesoBox.style.left = calculaPosicao(d1Input.value, 52, 29, 1, 25) + "%";
     distanciaCarga.value = calculaDistanciaCarga();
     distanciaCargaOut.textContent = calculaDistanciaCarga() + "m";
+    cargaBox.style.left = calculaPosicao(distanciaCarga.value,40,70,1,25) + "%";
     if(calculaDistanciaCarga() < 0) 
       distanciaCargaOut.style.color = "red";
     else 
